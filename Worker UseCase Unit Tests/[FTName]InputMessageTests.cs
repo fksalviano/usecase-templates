@@ -1,5 +1,6 @@
 using AutoFixture;
 using FluentAssertions;
+using Application.UseCases.[FTName].Ports;
 using Workers.UseCases.Entries.v1.[FTName];
 using Xunit;
 
@@ -35,7 +36,7 @@ namespace UnitTests.Workers.UseCases.Entries.v1.[FTName]
         public void ShouldConvertTo[FTName]Input()
         {
             //Arrange
-            var expected = _fixture.Build<[FTName]InputMessage>().Create();
+            var expected = _fixture.Build<[FTName]Input>().Create();
 
             _sut.RequestId = expected.RequestId;
             //add the others use case input params expecteds here
