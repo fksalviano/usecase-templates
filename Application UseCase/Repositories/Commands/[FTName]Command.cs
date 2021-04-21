@@ -12,7 +12,6 @@ namespace Application.UseCases.[FTName].Repositories.Commands
         public static CommandDefinition GetCommand([FTName]Input input, 
             IDbTransaction transaction, CancellationToken cancellationToken)
         {
-            var updateAt  = DateTimeOffset.UtcNow;
             return new CommandDefinition
             (
                 CommandText, new

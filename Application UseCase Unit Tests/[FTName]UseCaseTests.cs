@@ -101,7 +101,7 @@ namespace UnitTests.UseCases.[FTName]
                 .Verify(repo => repo.BeginTran(_cancellationToken), beginTranTimes);
 
             _repository
-                .Verify(repo => repo.[FTName]Async(input, _cancellationToken), [FTName | camelcease]Times);
+                .Verify(repo => repo.[FTName]Async(input, _cancellationToken), [FTName | camelcase]Times);
         }
                 
         private bool BeEquivalent<T>(T source, T expected)
